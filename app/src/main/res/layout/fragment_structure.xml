@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardCodedText"
+    tools:context=".ui.structure.StructureFragment">
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:gravity="center"
+        android:text="Structured concurrency Fragment"
+        app:layout_constraintBottom_toTopOf="@+id/buttons_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="#f1f1f1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/awaiting_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Awaiting children"
+            />
+        <Button
+            android:id="@+id/still_awaiting_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Still awaiting"
+            />
+        <Button
+            android:id="@+id/still_awaiting_different_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Awaiting from different scopes"
+            />
+        <Button
+            android:id="@+id/awaiting_jobs_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Awaiting different jobs"
+            />
+        <Button
+            android:id="@+id/awaiting_jobs2_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Awaiting manual job"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
